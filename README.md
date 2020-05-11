@@ -28,6 +28,12 @@
   * Tenant.rent
     * Returns an integer that is the total rent paid by all the tenants
 
+  * Tenant#my_rent
+    * Returns an integer for that tenant's rent
+
+  * Tenant#my_lease
+    * Returns a string for that tenant's apartment building and rent
+
 **APARTMENTBUILDING**
 
   * ApartmentBuilding.all
