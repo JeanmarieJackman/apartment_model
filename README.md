@@ -18,7 +18,7 @@
     * Returns an array of all the apartment buildings owned by a Landlord
 
 * Landlord#create_lease
-    * Given the arguments of name, rent, and apartment_building, creates a new tenant renting from that landlord
+    * Given the arguments of name, age, rent, and apartment_building, creates a new tenant renting from that landlord
 
 **TENANT**
 
@@ -44,6 +44,9 @@
 
  * ApartmentBuilding#rents
     * Returns an array of all the rent prices being paid in the building
+
+  * ApartmentBuilding#tenants_under_21
+    * Returns an array of tenants under age 21
 
 
 
