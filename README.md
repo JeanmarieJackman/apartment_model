@@ -11,7 +11,22 @@
 * Landlord.all
     * Returns an array of all the Landlords
 
+* Landlord#tenants
+    * Returns an array of all the tenants renting from a Landlord
+
 * Landlord#apartments
     * Returns an array of all the apartment buildings owned by a Landlord
 
-* Landlord#
+**TENANT**
+
+  * Tenant.all
+    * Returns an array of all the tenants
+
+**APARTMENTBUILDING**
+
+  * ApartmentBuilding.all
+    * Returns an array of all the apartment buildings
+
+  * ApartmentBuilding#tenant
+    * Returns an array of all tenants in an apartment building
+
