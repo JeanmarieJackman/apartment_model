@@ -26,3 +26,11 @@ class Tenant
 
 end
 binding.pry
+
+# **TENANT**
+
+#   * Tenant.all
+#     * Returns an array of all the tenants
+
+#   * Tenant.rent
+#     * Returns an integer that is the total rent paid by all the tenants

@@ -18,10 +18,10 @@
     * Returns an array of all the apartment buildings owned by a Landlord
 
 * Landlord#create_lease
-    * Given the arguments of name, rent, and apartment_building, creates a new tenant renting from that landlord
+    * Given the arguments of name, age, rent, and apartment_building, creates a new tenant renting from that landlord
 
   * Landlord#tenants_rents
-    * Returns an array of hashes for that Landlords tenant's names and monthly rent amounts
+    * Returns an array of hashes for that Landlord's tenants' names and monthly rent amounts
 
 **TENANT**
 
@@ -43,7 +43,7 @@
     * Returns an array of all landlords who have tenants in an apartment building.
 
   * ApartmentBuilding#tenants_rent
-    * Returns an integer that is the monthly rent paid by that tenant
+    * Returns an integer that is the monthly rent paid by all tenants in an apartment building
 
   * ApartmentBuilding#tenant_paying_highest_rent
     * Returns and instance of the tenant paying highest rent in an apartment building

@@ -14,6 +14,30 @@ class Landlord
         @@all
     end
 
+    def tenants
+        Tenant.all.select do |tenant|
+            tenant.landlord == self
+        end
+    end
+
+    def apartments
+        tenants.map do |tenant|
+            tenant.apartment_building
+        end
+    end
+
+    def create_lease(name, age, rent, apartment_building)
+        Tenant.new(name, age, rent, self, apartment_building)
+    end
+
+end
+binding.pry
+
+# **LANDLORD**
+
+# * Landlord.all
+#     * Returns an array of all the Landlords
+
 # * Landlord#tenants
 #     * Returns an array of all the tenants renting from a Landlord
 
@@ -21,12 +45,7 @@ class Landlord
 #     * Returns an array of all the apartment buildings owned by a Landlord
 
 # * Landlord#create_lease
-#     * Given the arguments of name, rent, and apartment_building, 
-#     creates a new tenant renting from that landlord
+#     * Given the arguments of name, age, rent, and apartment_building, creates a new tenant renting from that landlord
 
-# * Landlord#tenants_rents
-#     * Returns an array of hashes for that Landlords tenant's 
-#     names and monthly rent amounts
-
-end
-binding.pry
+#   * Landlord#tenants_rents
+#     * Returns an array of hashes for that Landlord's tenants' names and monthly rent amounts

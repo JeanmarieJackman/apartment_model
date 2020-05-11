@@ -27,19 +27,26 @@ class ApartmentBuilding
             tenant.landlord
         end
     end
+ 
 end
 binding.pry
 
+# **APARTMENTBUILDING**
 
-# * ApartmentBuilding#landlords
-# * Returns an array of all landlords who have tenants in an apartment building.
+#   * ApartmentBuilding.all
+#     * Returns an array of all the apartment buildings
 
-# * ApartmentBuilding#tenants_rent
-# * Returns an integer that is the monthly rent paid by that tenant
+#   * ApartmentBuilding#tenants
+#     * Returns an array of all tenants in an apartment building
 
-# * ApartmentBuilding#tenant_paying_highest_rent
-# * Returns and instance of the tenant paying highest rent in an apartment building
+#   * ApartmentBuilding#landlords
+#     * Returns an array of all landlords who have tenants in an apartment building.
 
-# * ApartmentBuilding#tenants_under_21
-# * Returns an array of the names of all tenants under age 21 in an apartment building
+#   * ApartmentBuilding#tenants_rent
+#     * Returns an integer that is the monthly rent paid by all tenants in an apartment building
 
+#   * ApartmentBuilding#tenant_paying_highest_rent
+#     * Returns and instance of the tenant paying highest rent in an apartment building
+
+#   * ApartmentBuilding#tenants_under_21
+#     * Returns an array of the names of all tenants under age 21 in an apartment building
