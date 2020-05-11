@@ -27,7 +27,12 @@ class ApartmentBuilding
             tenant.landlord
         end
     end
- 
+
+    def tenant_paying_highest_rent
+        tenant.max_by do |tenant|
+            tenant.rent 
+        end
+    end
 end
 binding.pry
 
