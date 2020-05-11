@@ -14,5 +14,5 @@ class ApartmentBuilding
     def self.all
         @@all
     end
-
 end
+binding.pry

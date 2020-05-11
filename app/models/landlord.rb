@@ -13,4 +13,16 @@ class Landlord
     def self.all
         @@all
     end
+
+# * Landlord#tenants
+#     * Returns an array of all the tenants renting from a Landlord
+
+# * Landlord#apartments
+#     * Returns an array of all the apartment buildings 
+#     owned by a Landlord
+
+# * Landlord#create_lease
+#     * Given the arguments of name, rent, and apartment_building, 
+#     creates a new tenant renting from that landlord
 end
+binding.pry

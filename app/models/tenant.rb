@@ -1,12 +1,13 @@
 require 'pry'
 
 class Tenant
-    attr_accessor :name
+    attr_accessor :name, :age
 
     @@all = []
 
-    def initialize(name)
+    def initialize(name, age)
         @name = name
+        @age = age
         @@all << self
     end
 
@@ -15,3 +16,4 @@ class Tenant
     end
 
 end
+binding.pry
