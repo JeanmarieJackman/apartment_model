@@ -17,16 +17,28 @@
 * Landlord#apartments
     * Returns an array of all the apartment buildings owned by a Landlord
 
+* Landlord#create_lease
+    * Given the arguments of name, rent, and apartment_building, creates a new tenant renting from that landlord
+
 **TENANT**
 
   * Tenant.all
     * Returns an array of all the tenants
+
+  * Tenant.rent
+    * Returns an integer that is the total rent paid by all the tenants
 
 **APARTMENTBUILDING**
 
   * ApartmentBuilding.all
     * Returns an array of all the apartment buildings
 
-  * ApartmentBuilding#tenant
+  * ApartmentBuilding#tenants
     * Returns an array of all tenants in an apartment building
+
+ * ApartmentBuilding#rents
+    * Returns an array of all the rent prices being paid in the building
+
+
+
 
