@@ -29,29 +29,22 @@ class ApartmentBuilding
     end
 
     def tenant_paying_highest_rent
-        tenant.max_by do |tenant|
+        tenants.max_by do |tenant|
             tenant.rent 
         end
     end
+
+    def tenants_rent
+        tenants.reduce(0) do |sum, tenant|
+            sum + tenant.rent
+        end
+    end
+
+    def tenants_under_21
+        tenants.select do |tenant|
+            tenant.age < 21
+        end
+    end
+
 end
 binding.pry
-
-# **APARTMENTBUILDING**
-
-#   * ApartmentBuilding.all
-#     * Returns an array of all the apartment buildings
-
-#   * ApartmentBuilding#tenants
-#     * Returns an array of all tenants in an apartment building
-
-#   * ApartmentBuilding#landlords
-#     * Returns an array of all landlords who have tenants in an apartment building.
-
-#   * ApartmentBuilding#tenants_rent
-#     * Returns an integer that is the monthly rent paid by all tenants in an apartment building
-
-#   * ApartmentBuilding#tenant_paying_highest_rent
-#     * Returns and instance of the tenant paying highest rent in an apartment building
-
-#   * ApartmentBuilding#tenants_under_21
-#     * Returns an array of the names of all tenants under age 21 in an apartment building

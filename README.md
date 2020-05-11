@@ -20,8 +20,8 @@
 * Landlord#create_lease
     * Given the arguments of name, age, rent, and apartment_building, creates a new tenant renting from that landlord
 
-  * Landlord#tenants_rents
-    * Returns an array of hashes for that Landlord's tenants' names and monthly rent amounts
+  * Landlord#tenants_and_rents
+    * Returns an array of arrays for that Landlord's tenants' names and monthly rent amounts
 
 **TENANT**
 
