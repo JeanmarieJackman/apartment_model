@@ -1,4 +1,5 @@
 require 'pry'
+require './app/models/pet.rb'
 
 class Tenant
     attr_accessor :name, :age, :rent, :landlord, :apartment_building
@@ -25,7 +26,7 @@ class Tenant
     end
 
     def get_new_pet(pet_name, species)
-        Tenant.new(pet_name, species)
+        Pet.new(pet_name, species)
     end
 
 end

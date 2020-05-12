@@ -1,4 +1,5 @@
 require 'pry'
+require './app/models/tenant.rb'
 
 class Landlord
     attr_accessor :name
@@ -31,5 +32,5 @@ class Landlord
     end
 
 end
-# binding.pry
+binding.pry
 
