@@ -24,5 +24,9 @@ class Tenant
         end
     end
 
+    def get_new_pet(pet_name, species)
+        Tenant.new(pet_name, species)
+    end
+
 end
-# binding.pry
+binding.pry
