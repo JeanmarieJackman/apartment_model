@@ -5,13 +5,14 @@ require './app/models/tenant.rb'
 
 
 class Pet
-    attr_accessor :pet_name, :species
+    attr_accessor :pet_name, :species, :tenant
 
     @@all = []
 
-    def initialize(pet_name, species)
-        @pet_name = name
+    def initialize(pet_name, species, tenant)
+        @pet_name = pet_name
         @species = species
+        @tenant = tenant
         @@all << self
     end
 
@@ -19,4 +20,4 @@ class Pet
         @@all
     end
 end
-binding.pry
+# binding.pry

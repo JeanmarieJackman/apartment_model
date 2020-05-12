@@ -29,7 +29,7 @@ class Tenant
     end
 
     def get_new_pet(pet_name, species)
-        Pet.new(pet_name, species)
+        Pet.new(pet_name, species, self)
     end
 
     def list_pets
@@ -37,9 +37,6 @@ class Tenant
             pet.name == self
         end
     end
-
-    # * Tenant#list_pets
-    # * Returns an array of all pets owned by a tenant
 
 end
 binding.pry
