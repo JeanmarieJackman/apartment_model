@@ -1,5 +1,8 @@
 require 'pry'
+require './app/models/apartment_buildings.rb'
+require './app/models/landlord.rb'
 require './app/models/pet.rb'
+
 
 class Tenant
     attr_accessor :name, :age, :rent, :landlord, :apartment_building
@@ -28,6 +31,15 @@ class Tenant
     def get_new_pet(pet_name, species)
         Pet.new(pet_name, species)
     end
+
+    def list_pets
+        Tenant.all.select do |pet|
+            pet.name == self
+        end
+    end
+
+    # * Tenant#list_pets
+    # * Returns an array of all pets owned by a tenant
 
 end
 binding.pry

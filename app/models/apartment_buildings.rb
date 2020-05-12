@@ -1,4 +1,7 @@
 require 'pry'
+require './app/models/landlord.rb'
+require './app/models/tenant.rb'
+require './app/models/pet.rb'
 
 class ApartmentBuilding
     attr_accessor :building_name, :address, :landlord

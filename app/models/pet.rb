@@ -1,4 +1,8 @@
 require 'pry'
+require './app/models/apartment_buildings.rb'
+require './app/models/landlord.rb'
+require './app/models/tenant.rb'
+
 
 class Pet
     attr_accessor :pet_name, :species
@@ -6,7 +10,7 @@ class Pet
     @@all = []
 
     def initialize(pet_name, species)
-        @pet_name = pet_name
+        @pet_name = name
         @species = species
         @@all << self
     end
@@ -15,4 +19,4 @@ class Pet
         @@all
     end
 end
-# binding.pry
+binding.pry
