@@ -30,12 +30,6 @@ class Landlord
         Tenant.new(name, age, rent, self, apartment_building)
     end
 
-    def tenants_and_rents
-        tenants.map do |tenants|
-            tenants.landlord == self
-        end
-    end
-
 end
 # binding.pry
 
