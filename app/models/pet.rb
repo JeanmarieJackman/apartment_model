@@ -21,7 +21,7 @@ class Pet
     end
 
     def name_owner
-        # @tenant
+        Self.tenant
     end
 end
 # binding.pry
