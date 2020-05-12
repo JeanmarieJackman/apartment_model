@@ -19,5 +19,9 @@ class Pet
     def self.all
         @@all
     end
+
+    def name_owner
+        @tenant
+    end
 end
 # binding.pry

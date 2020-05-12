@@ -49,5 +49,11 @@ class ApartmentBuilding
         end
     end
 
+    def tenants_who_own_pets
+        tenants.select do |tenant|
+            tenant.pet = true
+        end
+    end
+
 end
 # binding.pry
