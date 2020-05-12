@@ -31,25 +31,11 @@ class Landlord
     end
 
     def tenants_and_rents
-
+        tenants.map do |tenants, rent|
+            tenants.landlord == self
+        end
     end
 
 end
-binding.pry
+# binding.pry
 
-# **LANDLORD**
-
-# * Landlord.all
-#     * Returns an array of all the Landlords
-
-# * Landlord#tenants
-#     * Returns an array of all the tenants renting from a Landlord
-
-# * Landlord#apartments
-#     * Returns an array of all the apartment buildings owned by a Landlord
-
-# * Landlord#create_lease
-#     * Given the arguments of name, age, rent, and apartment_building, creates a new tenant renting from that landlord
-
-#   * Landlord#tenants_and_rents
-#     * Returns an array of arrays for that Landlord's tenants' names and monthly rent amounts

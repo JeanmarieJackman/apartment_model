@@ -47,4 +47,4 @@ class ApartmentBuilding
     end
 
 end
-binding.pry
+# binding.pry
