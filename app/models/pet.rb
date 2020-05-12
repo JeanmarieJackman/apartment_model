@@ -21,7 +21,8 @@ class Pet
     end
 
     def name_owner
-        Self.tenant
+        name_owner = @tenant
+        name_owner
     end
 end
 # binding.pry
