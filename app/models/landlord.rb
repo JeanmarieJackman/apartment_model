@@ -31,7 +31,7 @@ class Landlord
     end
 
     def tenants_and_rents
-        tenants.map do |tenants, rent|
+        tenants.map do |tenants|
             tenants.landlord == self
         end
     end
