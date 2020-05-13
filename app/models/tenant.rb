@@ -5,15 +5,15 @@ require './app/models/pet.rb'
 
 
 class Tenant
-    attr_accessor :name, :age, :rent, :landlord, :apartment_building
+    attr_accessor :name, :age, :rent, :apartment_building
 
     @@all = []
 
-    def initialize(name, age, rent, landlord, apartment_building)
+    def initialize(name, age, rent, apartment_building)
         @name = name
         @age = age
         @rent = rent
-        @landlord = landlord
+        # @landlord = landlord - landlord belongs to ApartmentBuilding
         @apartment_building = apartment_building
         @@all << self
     end
@@ -32,6 +32,8 @@ class Tenant
         Pet.new(pet_name, species, self)
     end
 
+    #list_pets doesn't work because relationship isn't set up that wat. 
+    #have to go to Pets for list of pets.
     def list_pets
         Tenant.all.select do |pet|
             pet.name == self
@@ -39,4 +41,4 @@ class Tenant
     end
 
 end
-binding.pry
+

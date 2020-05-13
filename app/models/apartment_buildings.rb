@@ -4,14 +4,14 @@ require './app/models/tenant.rb'
 require './app/models/pet.rb'
 
 class ApartmentBuilding
-    attr_accessor :building_name, :address, :landlord
+    attr_accessor :building_name, :address
 
     @@all = []
 
-    def initialize(building_name, address, landlord)
+    def initialize(building_name, address)
         @building_name = building_name
         @address = address
-        @landlord = landlord
+        # @landlord = landlord - landlord belongs to apartment_building.
         @@all << self
     end
 
@@ -19,17 +19,27 @@ class ApartmentBuilding
         @@all
     end
 
+    #I made changes to self.tenants.  When you iterate through ApartmentBuilding,
+    #you are iterating through each instance of apartment building. 
+    #So I think you want to iterate through Tenent.all instead of
+    #ApartmentBuilding.all
+
     def tenants
-        ApartmentBuilding.all.select do |tenant|
-            tenant.building_name == self
+        Tenant.all.select do |tenant|
+            tenant.apartment_building == self
         end
     end
 
     def landlords
-        tenants.map do |tenant|
-            tenant.landlord
+        Landlord.all.select do |landlord|
+            landlord.apartment_building == self
         end
     end
+    # def landlords
+    #     tenants.map do |tenant|
+    #         tenant.landlord
+    #     end
+    # end
 
     def tenant_paying_highest_rent
         tenants.max_by do |tenant|
@@ -49,6 +59,7 @@ class ApartmentBuilding
         end
     end
 
+    # tenants_who_own_pets doesn't work becase relationship isn't set up that way. 
     def tenants_who_own_pets
         tenants.select do |tenant|
             tenant.pet = true
