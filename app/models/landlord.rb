@@ -38,5 +38,4 @@ class Landlord
     end
 
 end
-# binding.pry
 

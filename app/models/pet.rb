@@ -20,9 +20,10 @@ class Pet
         @@all
     end
 
+    #changed this so it returned the tenants name instead on the
+    #tenant object
     def name_owner
-        name_owner = @tenant
-        name_owner
+        name = tenant.name
+        tenant.name
     end
 end
-# binding.pry

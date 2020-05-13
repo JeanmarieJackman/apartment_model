@@ -11,16 +11,17 @@ jim = Landlord.new("Jim", suites)
 mary = Landlord.new("Mary", the_park)
 tim = Landlord.new("Tim", downtown)
 
-pepper = Pet.new("Pepper", "dog", anna) 
-mowgli = Pet.new("Mowgli", "dog", jillian) 
-jack = Pet.new("Jack", "dog", chloe) 
-fronky = Pet.new("Fronky", "cat", kathy) 
-
 anna = Tenant.new("Anna", 19, 2000, casa)
 brad = Tenant.new("Brad", 36, 4000, casa)
 jillian = Tenant.new("Jillian", 28, 1000, the_park)
 chloe = Tenant.new("Chloe", 29, 1500, downtown)
 kathy = Tenant.new("Kathy", 45, 900, suites)
+
+mowgli = Pet.new("Mowgli", "dog", jillian) 
+jack = Pet.new("Jack", "dog", chloe) 
+fronky = Pet.new("Fronky", "cat", kathy) 
+pepper = Pet.new("Pepper", "dog", anna)
+
 
 
 

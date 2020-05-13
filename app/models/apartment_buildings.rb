@@ -30,11 +30,17 @@ class ApartmentBuilding
         end
     end
 
-    def landlords
+    # Changed the method to Landlord because each ApartmentBuilding 
+    # only has one landlord. 
+    def landlord
         Landlord.all.select do |landlord|
             landlord.apartment_building == self
         end
     end
+
+    # The below method didn't work because you have to go to Landlord for the 
+    # apartment_building
+
     # def landlords
     #     tenants.map do |tenant|
     #         tenant.landlord
@@ -60,11 +66,20 @@ class ApartmentBuilding
     end
 
     # tenants_who_own_pets doesn't work becase relationship isn't set up that way. 
+    # We have to go to Pets for info on owner. 
+
+    # def tenants_who_own_pets
+    #     tenants.select do |tenant|
+    #         tenant.pet = true
+    #     end
+    # end
+
+    # We have to go through Pets to get a list of tenants, then compare tenants to 
+    # building tenants. This method is not working yet. 
     def tenants_who_own_pets
-        tenants.select do |tenant|
-            tenant.pet = true
+        Pet.all.select do |pet|
+            pet.tenant.include?(self.tenants)
         end
     end
 
 end
-# binding.pry
