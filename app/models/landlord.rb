@@ -22,8 +22,8 @@ class Landlord
     def tenants
         #get apartment_building from landlord
         #once we have the apartment building, get the tenants from that building.
-        ApartmentBuilding.all.select do |ab|
-            self.apartment_building == ab.tenants.apartment_building
+        Tenant.all.select do |tenant|
+            self.apartment_building == tenant.apartment_building
         end
     end
 

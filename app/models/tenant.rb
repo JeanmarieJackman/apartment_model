@@ -32,9 +32,10 @@ class Tenant
         Pet.new(pet_name, species, self)
     end
 
-    #list_pets doesn't work because can't iterate through Tenants to get
+    #list_pets didn't work because can't iterate through Tenants to get
     #pets.  Relationship isn't set up that way. 
-    #have to go to Pets for list of pets.
+    #Had to go to Pets for list of pets.
+    
     def list_pets
         pet_names = []
         Pet.all.each do |pet|

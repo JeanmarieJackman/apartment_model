@@ -75,10 +75,10 @@ class ApartmentBuilding
     # end
 
     # We have to go through Pets to get a list of tenants, then compare tenants to 
-    # building tenants. This method is not working yet. 
+    # building tenants.  
     def tenants_who_own_pets
         Pet.all.select do |pet|
-            pet.tenant.include?(self.tenants)
+            self.tenants.include?(pet.tenant)
         end
     end
 
