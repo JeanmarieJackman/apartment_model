@@ -1,9 +1,3 @@
-require 'pry'
-require './app/models/apartment_buildings.rb'
-require './app/models/landlord.rb'
-require './app/models/pet.rb'
-
-
 class Tenant
     attr_accessor :name, :age, :rent, :landlord, :apartment_building
 
@@ -39,4 +33,4 @@ class Tenant
     end
 
 end
-binding.pry
+

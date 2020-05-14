@@ -4,3 +4,5 @@ require_relative '../app/models/landlord.rb'
 require_relative '../app/models/tenant.rb'
 require_relative '../app/models/pet.rb'
 
+
+
